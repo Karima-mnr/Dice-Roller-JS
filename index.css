@@ -1,0 +1,26 @@
+.label{
+    display: block;
+    text-align: center;
+    font-size: 10em;
+    font-family: helvetica;
+
+}
+.divB{
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 3em;
+}
+.B{
+    font-size: 0.7em;
+    color: aliceblue;
+    background-color: rgb(67, 104, 12);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ;
+}
+.B:hover{
+    background-color: rgb(108, 172, 12);
+}
+body{
+    font-size: 2em;
+}
