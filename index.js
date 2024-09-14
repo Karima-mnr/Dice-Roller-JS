@@ -1,21 +1,16 @@
-const textBox = document.getElementById(`textBox`);
-const fah = document.getElementById(`fah`);
-const cel = document.getElementById(`cel`);
-const result = document.getElementById(`result`);
-let temp ;
+function diceGame(){
+    const numOfDice = document.getElementById(`numOfdice`).value;
+    const diceResult = document.getElementById(`DiceResult`);
+    const diceImages = document.getElementById(`DiceImages`);
+    const values = [];
+    const images = [];
+    for( let i = 0; i < numOfDice ; i++){
+        const value = Math.floor( Math.random() * 6) + 1 ;
+        values.push(value);
+        images.push(`<img src="diceimg/${value}.jpg"  alt="Dice ${value}">`);
+    }
+    diceResult.textContent = `dice: ${values.join(`, `)}`;
+    diceImages.innerHTML = images.join(``);
+    
 
-function convert(){
-    if(fah.checked){
-        temp = Number(textBox.value);
-        temp = (temp * 9/5 ) + (32) ;
-        result.textContent =  temp.toFixed(1) + "°F" ;
-    }
-    else if(cel.checked){
-        temp = Number(textBox.value);
-        temp = (5/9) * (temp - 32);
-        result.textContent = temp.toFixed(1) + "°C";
-    }
-    else{
-        result.textContent = 'Select a unit ';
-    }
-}
+ }
